@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter_intirobotics/gradient_new.dart';
 import 'gradient_top.dart';
 import 'my_clipper.dart';
 import 'review_list.dart';
@@ -31,23 +32,18 @@ class MyApp extends StatelessWidget {
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: Scaffold(
         body: Stack(
+          //scrollDirection: Axis.vertical,
           children: [
+            GradientNew(),
             ListView(
+              //scrollDirection: Axis.vertical,
               children: [
-                ReviewList(),
+                //GradientNew(),
+                //ReviewList(),
               ],
             ),
             //GradientTop("IntiRobotics Perú")
-            ClipPath(
-              clipper: MyClipper(),
-              child: Container(
-                width: double.infinity,
-                height: 120.0,
-                decoration: BoxDecoration(
-                  color: Color(0xFFA7C664)
-                ),
-              ),
-            ),
+            //GradientNew(),
           ],
         ),
       ),
